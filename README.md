@@ -1,1 +1,1 @@
-Proyecti SPIN gagina oficial
+Proyecti SPIN pagina oficial
