@@ -8,9 +8,75 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
-    max-width: 1128px;
-    flex-direction: column;
-    height: 28px;
+    margin: 0 auto;
+}
+.info-general{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+.header{
+    font-family: "Mona Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #C1FF72;
+    background-color: #3d2174;
+    color: #0097B2;
+}
+
+.logo{
+     display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-left: auto;
+    margin-right: 60px
+}
+
+.nav a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav a:hover{
+    border-bottom: 2px solid #C1FF72;
+    padding-bottom: 8px;
+    color: #C1FF72;
+}
+
+.header-button{
+    background: #3d2174;
+    padding: 10px 22px;
+    border-radius: 30px;
+    border:solid #3d2174;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+}
+
+.header-button:hover{
+    background-color: #3d2174;
+    color: #C1FF72;
+    border:solid #C1FF72;
 }
 h1 {
     font-size: clamp(2rem, 3vw, 4rem);
@@ -248,12 +314,56 @@ p {
     fill: gold;
     stroke: gold;
 }
+.Perfil{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.info-perfil{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.avatar{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    text-transform: uppercase;
+}
+.avatar.rosa{
+    background: pink;
+}
+.avatar.naranja{
+    background-color: orange;
+}
+.avatar.azul{
+    background: #4b2fd6;
+}
 .opinion1, .opinion2, .opinion3, .respuesta,
 .recomendacion1, .recomendacion2, .recomendacion3{
     border: 1px solid #eee;
     border-radius: 12px;
     padding: 16px 20px;
     margin-bottom: 16px;
+}
+.recomendacion1 .Perfil,
+.recomendacion2 .Perfil,
+.recomendacion3 .Perfil{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 .opiniones-header, .recomendaciones-header{
     display: flex;
@@ -401,4 +511,278 @@ p {
   font-size: clamp(0.85rem, 1.2vw, 0.95rem);
   color: #57534e;
   margin: 0;
+}
+/* FOOTER */
+
+.footer {
+    background-color: #3d2174;
+    color: #ffffff;
+    font-family: "Mona Sans", sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    padding: 40px 60px 20px;
+}
+
+
+/* LOGO */
+
+.logofooter {
+    width: 200px;
+}
+
+.logofooter img {
+    width: 150px;
+    height: 100px;
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.logofooter p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+
+/* SECCIONES DEL FOOTER */
+
+.footer-section {
+    min-width: 180px;
+}
+
+.footer h3 {
+    margin: 0 0 20px;
+    font-family: "Boldonse", system-ui;
+    font-size: 20px;
+}
+
+.footer ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+/* ENLACES */
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #C1FF72;
+}
+
+
+/* CONTACTO */
+
+.soporte {
+    font-size: 14px;
+    color: #ffffff;
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.soporte li:hover {
+    color: #C1FF72;
+}
+
+
+/* PARTE INFERIOR */
+
+.border {
+    width: 100%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    margin-top: 20px;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* REDES SOCIALES */
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.border a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+}
+
+.border img {
+    width: 30px;
+    height: 30px;
+
+    object-fit: contain;
+
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+/* Apartado solo de animaciones/transiciones */
+.btn-contactar{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.9rem;
+    background: #c1ff72;
+    color: #3d2174;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.btn-contactar:hover{
+    background-color: #769e42; 
+}
+.btn-contactar:active{
+    transform: scale(0.97); 
+}
+.btn-contactar:focus-visible{
+    outline: 2px solid #c1ff72;
+    outline-offset: 2px;
+}
+.acciones-tarjeta button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1a1a1a;
+    transition: color 0.2s ease, transform 0.15s ease;
+}
+.acciones-tarjeta button:hover{
+    color: #c1ff72;
+    transform: scale(1.1);
+}
+.acerca button{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.acerca button:hover{
+    border-color: #0097b2;
+    background-color: #7be4f7;
+}
+.tarjeta-perfil{
+    transition: box-shadow 0.25s ease;
+}
+.tarjeta-perfil:hover{
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); 
+}
+.opinion1, .opinion2, .opinion3, .respuesta,
+.recomendacion1, .recomendacion2, .recomendacion3{
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.opinion1:hover, .opinion2:hover, .opinion3:hover,
+.recomendacion1:hover, .recomendacion2:hover, .recomendacion3:hover{
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+.info-icon{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #6b6b6b;
+    transition: color 0.2s ease;
+}
+.info-icon:hover{
+    color: #1a1a1a;
+}
+/*responsive*/
+@media (max-width: 768px) {
+
+    /* 1. El hero deja de ser dos columnas y pasa a apilarse */
+    .hero{
+        flex-direction: column;
+    }
+
+    /* 2. La tarjeta de perfil deja de ser sticky y ocupa el ancho completo */
+    .perfil{
+        position: static;   /* apaga el sticky en móvil */
+        width: 100%;
+    }
+    .tarjeta-perfil{
+        width: 100%;        /* en vez del 320px fijo de escritorio */
+    }
+
+    /* 3. La promesa ya no necesita max-width fijo */
+    .promesa{
+        max-width: 100%;
+    }
+
+    /* 4. La grilla de precios pasa de 4 columnas a 2 */
+    .pricing-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* 5. Navbar: logo + botón se apilan si no caben en una fila */
+    .navbar-contenido{
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    /* 6. Footer: los elementos se apilan en vez de ir en fila */
+    .footer-contenido{
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+
+/* La grilla de precios baja a 1 columna en pantallas muy angostas */
+.pricing-grid{
+    grid-template-columns: 1fr;
+}
+
+/* Menos padding lateral para aprovechar el espacio */
+.info-general{
+    padding: 0 16px;
+}
+
+/* Los botones de "Acerca de" quedan más chicos */
+.acerca button{
+    font-size: 0.8rem;
+    padding: 6px 12px;
+}
 }
