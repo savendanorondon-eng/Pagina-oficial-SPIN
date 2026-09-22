@@ -1,0 +1,505 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+img{
+    width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.header{
+    font-family: "Mona Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #C1FF72;
+    background-color: #3d2174;
+    color: #0097B2;
+}
+
+.logo{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-left: auto;
+    margin-right: 60px
+}
+
+.nav a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav a:hover{
+    border-bottom: 2px solid #C1FF72;
+    padding-bottom: 8px;
+    color: #C1FF72;
+}
+
+.header-button{
+    background: #3d2174;
+    padding: 10px 22px;
+    border-radius: 30px;
+    border:solid #3d2174;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+}
+
+.header-button:hover{
+    background-color: #3d2174;
+    color: #C1FF72;
+    border:solid #C1FF72;
+}
+
+
+.REGISTRO {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+    flex: 1;
+}
+
+
+
+
+.PRIMERO {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.pregunta span {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3d2174;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40   px;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.texto h2 {
+    font-size: 22px;
+    color: #11164e;
+    font-family: "Boldonse", system-ui;
+}
+
+.texto h1 {
+    font-size: 25px;
+    color: #0097b2;
+    font-family: "Boldonse", system-ui;
+}
+
+.texto p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #000000;
+    font-family: "Mona Sans", sans-serif;
+    text-align: left;
+}
+
+
+
+
+.SEGUNDO {
+    width: 60%;
+}
+
+
+
+
+.BUSQUEDA {
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.BUSQUEDA form {
+    width: 100%;
+    height: 48px;
+    background-color: #f1f3f8;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.BUSQUEDA input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0 15px;
+    font-size: 14px;
+    font-family: "Mona Sans", sans-serif;
+    color: #11164e;
+}
+
+.BUSQUEDA button {
+    width: 50px;
+    height: 90%;
+    border: none;
+    background-color: transparent;
+    color: #11164e;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.DIVICION {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.LINEA {
+    display: flex;
+    width: 500px;
+    height: 40px;
+    background-color: #f0f2ff;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.DEPORTISTAS,.ENTRENADORES,.CLUBS {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.DEPORTISTAS h3,.ENTRENADORES h3,.CLUBS h3 {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 15px;
+}
+
+.ACTIVO {
+    color: white;
+    border-radius: 35px;
+}
+
+.DEPORTISTAS.ACTIVO {
+    background-color: #3d2174;
+}
+
+.ENTRENADORES.ACTIVO {
+    background-color: #0097B2;
+}
+
+.CLUBS.ACTIVO {
+    background-color: #C1FF72;
+    color: #3d2174;
+}
+
+
+
+.FRECUENTES h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    font-family: "Mona Sans", sans-serif;
+}
+
+.FRECUENTES h3::before {
+    display: inline-block;
+    width: 9px;
+    height: 25px;
+    background-color: #c1ff72;
+    margin-right: 10px;
+    vertical-align: middle;
+    transform: skew(-20deg);
+}
+
+.contenedor {
+    display: flex;
+    gap: 28px;
+    padding: 10px 0;
+}
+
+.carta {
+    width: 50%;
+    min-height: 105px;
+    border: 1px solid #e2e5ed;
+    border-radius: 13px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background-color: white;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.carta:hover {
+    transform: scale(1.03);
+}
+
+
+
+.imagen span,.imagen-entrenador span,.imagen-clubs span {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.imagen span {
+    background-color: #3d2174;
+    color: #ffffff;
+}
+
+.imagen span:hover {
+    background-color: #0097b2;
+}
+
+.imagen-entrenador span {
+    background-color: #0097B2;
+    color: #ffffff;
+}
+
+.imagen-entrenador span:hover {
+    background-color: #C1FF72;
+    color: #3d2174;
+}
+
+.imagen-clubs span {
+    background-color: #C1FF72;
+    color: #3d2174;
+}
+
+.imagen-clubs span:hover {
+    background-color: #3d2174;
+    color: #ffffff;
+}
+
+
+
+.informacion h4 {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 14px;
+    color: #3d2174;
+}
+
+.informacion p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #000000;
+    font-family: "Mona Sans", sans-serif;
+    text-align: left;
+}
+
+
+
+.CONTACTA {
+    margin-top: 20px;
+    padding: 17px;
+    border-radius: 13px;
+    background-color: #f1f8e8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    font-family: "Mona Sans", sans-serif;
+}
+
+.CONTACTA .info {
+    flex: 1;
+}
+
+.CONTACTA .info h4 {
+    font-size: 14px;
+    color: #11164e;
+    margin-bottom: 5px;
+}
+
+.CONTACTA .info p {
+    font-size: 12px;
+    color: #000000;
+    text-align: left;
+}
+
+.boton {
+    width: 170px;
+}
+
+.boton button {
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    padding: 11px 18px;
+    background-color: #c1ff72;
+    color: #11164e;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Mona Sans", sans-serif;
+    transition: 0.3s ease;
+    margin: 0;
+}
+
+.boton button:hover {
+    background-color: #0097b2;
+    color: white;
+    transform: scale(1.05);
+}
+
+
+
+.formulario {
+    background-color: white;
+    width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.formulario h1 {
+    color: #3D2174;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Boldonse", system-ui;
+    font-size: 25px;
+}
+
+.formulario p {
+    text-align: center;
+    font-family: "Mona Sans", sans-serif;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: "Mona Sans", sans-serif;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.formulario button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #3D2174;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.formulario button:hover {
+    background-color: #C1FF72;
+    color: black;
+}
+
+.footer{
+    background-color: #3d2174;
+    color: #ffffff;
+    font-family: "Mona Sans", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+}
+
+.footer h3{
+    padding-bottom: 25px;
+    font-family: "Boldonse", system-ui;
+    font-size: 20px;
+}
+
+.footer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li{
+    font-size: 15px;
+}
+
+.Navegacion li:hover{
+    color: #C1FF72;
+}
+
+.sobrespin li:hover{
+    color: #C1FF72;
+}
+
+.soporte li:hover{
+    color: #C1FF72;
+}
+
+.border{
+    display: flex;
+    align-items: end;
+    background-color: #3d2174;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.border a{
+    width: 30px;
+    height:auto;
+    padding: 5px;
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
