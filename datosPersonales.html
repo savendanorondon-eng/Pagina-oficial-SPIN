@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIN - Registro de entrenador</title>
+    <link rel="stylesheet" href="CSS/datosPersonales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="img/imgdp/logo.jpg" alt="SPIN">
+    </div>
+
+    <nav class="nav-links" id="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="#">Deportes</a>
+        <a href="#">Entrenadores</a>
+        <a href="#">Comunidad</a>
+        <a href="#">Eventos</a>
+    </nav>
+
+    <div class="nav-icons">
+        <div class="search-wrapper">
+            <button type="button" id="search-icon" class="icon-btn" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Buscar..."
+                class="search-input hidden"
+            >
+        </div>
+
+        <button
+            type="button"
+            id="bell-icon"
+            class="icon-btn"
+            aria-label="Notificaciones"
+        >
+            <i class="fa-regular fa-bell"></i>
+        </button>
+
+        <div class="profile-menu">
+            <button
+                type="button"
+                class="avatar-btn"
+                id="avatar-btn"
+            >
+                <span class="avatar" id="nav-avatar"></span>
+            </button>
+
+            <div
+                class="profile-dropdown hidden"
+                id="profile-dropdown"
+            >
+                <div class="profile-dropdown-header">
+                    <span
+                        class="dropdown-avatar"
+                        id="dropdown-avatar"
+                    ></span>
+
+                    <div>
+                        <strong id="dropdown-name">
+                            Entrenador
+                        </strong>
+
+                        <span>
+                            Mi perfil
+                        </span>
+                    </div>
+                </div>
+
+                <div class="profile-dropdown-divider"></div>
+
+                <button type="button" id="profile-button">
+                    <i class="fa-regular fa-user"></i>
+                    Perfil
+                </button>
+
+                <button type="button" id="settings-button">
+                    <i class="fa-solid fa-gear"></i>
+                    Configuración
+                </button>
+
+                <button
+                    type="button"
+                    id="logout-btn"
+                    class="logout-button"
+                >
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Cerrar sesión
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="layout">
+
+    <aside class="side-panel">
+
+        <div
+            class="side-banner hidden"
+            data-banner="2"
+        >
+            <img
+                src="img/imgdp/banner1.jpg"
+                alt="Perfil profesional SPIN"
+            >
+
+            <div class="side-banner-overlay"></div>
+
+            <div class="side-banner-content">
+                <i class="fa-solid fa-user-tie"></i>
+
+            </div>
+        </div>
+
+        <div
+            class="side-banner hidden"
+            data-banner="3"
+        >
+            <img
+                src="img/imgdp/banner2.jpg"
+                alt="Experiencia como entrenador"
+            >
+
+            <div class="side-banner-overlay"></div>
+
+            <div class="side-banner-content">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+        </div>
+
+        <div
+            class="side-banner hidden"
+            data-banner="4"
+        >
+            <img
+                src="img/imgdp/banner3.jpg"
+                alt="Disponibilidad para entrenar"
+            >
+
+            <div class="side-banner-overlay"></div>
+
+            <div class="side-banner-content">
+                <i class="fa-solid fa-calendar-days"></i>
+
+            </div>
+        </div>
+
+        <div
+            class="side-banner hidden"
+            data-banner="5"
+        >
+            <img
+                src="img/imgdp/banner4.jpg"
+                alt="Certificaciones y documentos"
+            >
+
+            <div class="side-banner-overlay"></div>
+
+            <div class="side-banner-content">
+                <i class="fa-solid fa-certificate"></i>
+
+            </div>
+        </div>
+
+        <div
+            class="side-banner hidden"
+            data-banner="6"
+        >
+            <img
+                src="img/imgdp/banner5.jpg"
+                alt="Finalizar registro SPIN"
+            >
+
+            <div class="side-banner-overlay"></div>
+
+            <div class="side-banner-content">
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2>
+                    Estás.<br>
+                    Muy cerca.<br>
+                    De SPIN.
+                </h2>
+
+                <p>
+                    Revisa tu información y completa tu registro como entrenador.
+                </p>
+            </div>
+        </div>
+
+        <div class="profile-photo-area">
+            <div
+                class="profile-photo-large"
+                id="profile-photo-large"
+            >
+                <i class="fa-solid fa-camera"></i>
+            </div>
+
+            <label
+                for="photo-input"
+                class="photo-upload-button"
+            >
+                <i class="fa-solid fa-camera"></i>
+                Agregar foto
+            </label>
+
+            <input
+                type="file"
+                id="photo-input"
+                accept="image/png, image/jpeg"
+                class="hidden"
+            >
+
+            <div
+                class="photo-upload-status"
+                id="photo-upload-status"
+            >
+                <i class="fa-solid fa-image"></i>
+                No has seleccionado una imagen
+            </div>
+
+            <h2>
+                Foto de perfil
+            </h2>
+
+            <p>
+                Agrega una foto para que otros usuarios puedan reconocerte.
+            </p>
+
+            <small>
+                JPG o PNG · Máximo 2MB
+            </small>
+        </div>
+
+    </aside>
+
+    <main class="main-panel">
+
+        <section
+            class="steps"
+            id="steps-bar"
+        >
+            <div
+                class="step active"
+                data-step="1"
+            >
+                <div class="step-circle">
+                    1
+                </div>
+
+                <span>
+                    Datos personales
+                </span>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div
+                class="step"
+                data-step="2"
+            >
+                <div class="step-circle">
+                    2
+                </div>
+
+                <span>
+                    Perfil profesional
+                </span>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div
+                class="step"
+                data-step="3"
+            >
+                <div class="step-circle">
+                    3
+                </div>
+
+                <span>
+                    Experiencia
+                </span>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div
+                class="step"
+                data-step="4"
+            >
+                <div class="step-circle">
+                    4
+                </div>
+
+                <span>
+                    Disponibilidad
+                </span>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div
+                class="step"
+                data-step="5"
+            >
+                <div class="step-circle">
+                    5
+                </div>
+
+                <span>
+                    Certificaciones
+                </span>
+            </div>
+
+            <div class="step-line"></div>
+
+            <div
+                class="step"
+                data-step="6"
+            >
+                <div class="step-circle">
+                    6
+                </div>
+
+                <span>
+                    Finalizar
+                </span>
+            </div>
+        </section>
+
+        <form
+            class="form-box"
+            id="wizard-form"
+        >
+
+            <section
+                class="step-panel active"
+                data-panel="1"
+            >
+                <h1>
+                    Datos personales
+                </h1>
+
+                <p class="subtitle">
+                    Cuéntanos un poco sobre ti.
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="nombre">
+                            Nombre completo *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Ej. Laura Camila Rodríguez"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="tipo-doc">
+                            Tipo de documento *
+                        </label>
+
+                        <select
+                            id="tipo-doc"
+                            required
+                        >
+                            <option value="">
+                                Selecciona
+                            </option>
+
+                            <option value="CC">
+                                Cédula de ciudadanía
+                            </option>
+
+                            <option value="CE">
+                                Cédula de extranjería
+                            </option>
+
+                            <option value="PA">
+                                Pasaporte
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="numero-doc">
+                            Número de documento *
+                        </label>
+
+                        <input
+                        type="text"
+                        id="numero-doc"
+                        inputmode="numeric"
+                        maxlength="10"
+                        placeholder="Ej. 1234567890"
+                        required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="fecha-nac">
+                            Fecha de nacimiento *
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha-nac"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="correo">
+                            Correo electrónico *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            placeholder="ejemplo@correo.com"
+                            required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="celular">
+                            Número de celular *
+                        </label>
+
+                        <input
+                        type="tel"
+                        id="celular"
+                        inputmode="numeric"
+                        maxlength="10"
+                        placeholder="Ej. 3001234567"
+                        required
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="ciudad">
+                            Ciudad *
+                        </label>
+
+                        <select
+                            id="ciudad"
+                            required
+                        >
+                            <option value="">
+                                Selecciona ciudad
+                            </option>
+
+                            <option value="bogota">
+                                Bogotá
+                            </option>
+
+                            <option value="medellin">
+                                Medellín
+                            </option>
+
+                            <option value="cali">
+                                Cali
+                            </option>
+
+                            <option value="barranquilla">
+                                Barranquilla
+                            </option>
+                        </select>
+                    </div>
+
+                </div>
+            </section>
+
+            <section
+                class="step-panel"
+                data-panel="2"
+            >
+                <h1>
+                    Perfil profesional
+                </h1>
+
+                <p class="subtitle">
+                    Cuéntanos sobre tu experiencia y en qué te especializas.
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="field field-full">
+                        <label for="especialidad">
+                            Especialidad o categoría *
+                        </label>
+
+                        <select
+                            id="especialidad"
+                            required
+                        >
+                            <option value="">
+                                Selecciona una especialidad
+                            </option>
+
+                            <option value="futbol">
+                                Fútbol
+                            </option>
+
+                            <option value="baloncesto">
+                                Baloncesto
+                            </option>
+
+                            <option value="voleibol">
+                                Vóleibol
+                            </option>
+
+                            <option value="natacion">
+                                Natación
+                            </option>
+
+                            <option value="fitness">
+                                Fitness / Acondicionamiento
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="anios-exp">
+                            Años de experiencia *
+                        </label>
+
+                        <select
+                            id="anios-exp"
+                            required
+                        >
+                            <option value="">
+                                Selecciona
+                            </option>
+
+                            <option value="menos-1">
+                                Menos de 1 año
+                            </option>
+
+                            <option value="1-3">
+                                1 a 3 años
+                            </option>
+
+                            <option value="3-5">
+                                3 a 5 años
+                            </option>
+
+                            <option value="mas-5">
+                                Más de 5 años
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="field field-full">
+                        <label>
+                            Nivel como entrenador *
+                        </label>
+
+                        <div
+                            class="pill-group"
+                            id="nivel-group"
+                        >
+                            <button
+                                type="button"
+                                class="pill"
+                                data-value="Principiante"
+                            >
+                                Principiante
+                            </button>
+
+                            <button
+                                type="button"
+                                class="pill"
+                                data-value="Intermedio"
+                            >
+                                Intermedio
+                            </button>
+
+                            <button
+                                type="button"
+                                class="pill"
+                                data-value="Avanzado"
+                            >
+                                Avanzado
+                            </button>
+
+                            <button
+                                type="button"
+                                class="pill"
+                                data-value="Profesional"
+                            >
+                                Profesional
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section
+                class="step-panel"
+                data-panel="3"
+            >
+                <h1>
+                    Experiencia como entrenador
+                </h1>
+
+                <p class="subtitle">
+                    Cuéntanos sobre los equipos, categorías y logros en los que has trabajado.
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="field field-full">
+                        <label for="equipos">
+                            Equipos, categorías o clubes en los que has trabajado *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="equipos"
+                            placeholder="Ej. Club Deportivo XYZ, selección juvenil..."
+                            required
+                        >
+                    </div>
+
+                    <div class="field field-full">
+                        <label>
+                            Categorías que has entrenado *
+                        </label>
+
+                        <div
+                            class="checkbox-group"
+                            id="categorias-entrenadas"
+                        >
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    value="Infantil"
+                                >
+                                Infantil
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    value="Juvenil"
+                                >
+                                Juvenil
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    value="Adultos"
+                                >
+                                Adultos
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    value="Profesional"
+                                >
+                                Profesional
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="field field-full">
+                        <label for="logros">
+                            Principales logros
+                        </label>
+
+                        <textarea
+                            id="logros"
+                            rows="2"
+                            placeholder="Ej. Campeonatos, reconocimientos, etc."
+                        ></textarea>
+                    </div>
+
+                    <div class="field field-full">
+                        <label for="descripcion-exp">
+                            Descripción de tu experiencia *
+                        </label>
+
+                        <textarea
+                            id="descripcion-exp"
+                            rows="3"
+                            placeholder="Cuéntanos más sobre tu trayectoria como entrenador..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="field field-full">
+                        <label>
+                            Sube tus certificados y/o hoja de vida (opcional)
+                        </label>
+
+                        <label
+                            for="file-exp"
+                            class="dropzone"
+                            id="dropzone-exp"
+                        >
+                            <span id="dropzone-exp-text">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                                <strong>
+                                    Arrastra tu archivo aquí
+                                </strong>
+
+                                <br>
+
+                                o selecciona un archivo
+
+                                <br>
+
+                                <small>
+                                    PDF, JPG, PNG (Máx. 10MB)
+                                </small>
+                            </span>
+                        </label>
+
+                        <input
+                            type="file"
+                            id="file-exp"
+                            class="hidden"
+                            accept=".pdf,.jpg,.jpeg,.png"
+                        >
+
+                        <div
+                            class="file-preview"
+                            id="file-exp-preview"
+                        ></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section
+                class="step-panel"
+                data-panel="4"
+            >
+                <h1>
+                    Disponibilidad
+                </h1>
+
+                <p class="subtitle">
+                    Indica dónde y cuándo puedes entrenar o dar clases.
+                </p>
+
+                <p class="section-label">
+                    Ubicación
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="ciudad-disp">
+                            Ciudad *
+                        </label>
+
+                        <select
+                            id="ciudad-disp"
+                            required
+                        >
+                            <option value="">
+                                Selecciona ciudad
+                            </option>
+
+                            <option value="bogota">
+                                Bogotá
+                            </option>
+
+                            <option value="medellin">
+                                Medellín
+                            </option>
+
+                            <option value="cali">
+                                Cali
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="zona-disp">
+                            Localidad / Zona *
+                        </label>
+
+                        <select
+                            id="zona-disp"
+                            required
+                        >
+                            <option value="">
+                                Selecciona zona
+                            </option>
+
+                            <option value="norte">
+                                Norte
+                            </option>
+
+                            <option value="sur">
+                                Sur
+                            </option>
+
+                            <option value="centro">
+                                Centro
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="field field-full">
+                        <label for="modalidad">
+                            Modalidad de entrenamiento *
+                        </label>
+
+                        <select
+                            id="modalidad"
+                            required
+                        >
+                            <option value="">
+                                Selecciona
+                            </option>
+
+                            <option value="Presencial">
+                                Presencial
+                            </option>
+
+                            <option value="Virtual">
+                                Virtual
+                            </option>
+
+                            <option value="Mixta">
+                                Mixta
+                            </option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <p class="section-label">
+                    Días y horarios disponibles
+                </p>
+
+                <div class="availability-wrap">
+
+                    <table
+                        class="availability-table"
+                        id="availability-table"
+                    >
+                        <thead>
+                            <tr>
+                                <th>Día</th>
+                                <th>Mañana</th>
+                                <th>Tarde</th>
+                                <th>Noche</th>
+                            </tr>
+                        </thead>
+
+                        <tbody></tbody>
+                    </table>
+
+                    <div class="info-card">
+                        <span class="info-icon">
+                            <i class="fa-regular fa-calendar"></i>
+                        </span>
+
+                        <p>
+                            Tu disponibilidad nos ayuda a conectarte con más oportunidades.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section
+                class="step-panel"
+                data-panel="5"
+            >
+                <h1>
+                    Certificaciones y documentos
+                </h1>
+
+                <p class="subtitle">
+                    Adjunta los documentos que acrediten tu formación y experiencia.
+                </p>
+
+                <div
+                    class="doc-list"
+                    id="doc-list"
+                >
+
+                    <div
+                        class="doc-item"
+                        data-doc="identidad"
+                    >
+                        <span class="doc-icon">
+                            <i class="fa-regular fa-id-card"></i>
+                        </span>
+
+                        <div class="doc-info">
+                            <p class="doc-name">
+                                Documento de identidad *
+                            </p>
+
+                            <p class="doc-hint">
+                                PDF, JPG, PNG (Máx. 10MB)
+                            </p>
+                        </div>
+
+                        <label class="doc-upload-btn">
+                            <i class="fa-solid fa-upload"></i>
+                            Subir archivo
+
+                            <input
+                                type="file"
+                                class="hidden doc-input"
+                                accept=".pdf,.jpg,.jpeg,.png"
+                            >
+                        </label>
+                    </div>
+
+                    <div
+                        class="doc-item"
+                        data-doc="hoja-vida"
+                    >
+                        <span class="doc-icon">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </span>
+
+                        <div class="doc-info">
+                            <p class="doc-name">
+                                Hoja de vida (opcional)
+                            </p>
+
+                            <p class="doc-hint">
+                                PDF, JPG, PNG (Máx. 10MB)
+                            </p>
+                        </div>
+
+                        <label class="doc-upload-btn">
+                            <i class="fa-solid fa-upload"></i>
+                            Subir archivo
+
+                            <input
+                                type="file"
+                                class="hidden doc-input"
+                                accept=".pdf,.jpg,.jpeg,.png"
+                            >
+                        </label>
+                    </div>
+
+                    <div
+                        class="doc-item"
+                        data-doc="cert-deportivas"
+                    >
+                        <span class="doc-icon">
+                            <i class="fa-solid fa-medal"></i>
+                        </span>
+
+                        <div class="doc-info">
+                            <p class="doc-name">
+                                Certificaciones deportivas (opcional)
+                            </p>
+
+                            <p class="doc-hint">
+                                PDF, JPG, PNG (Máx. 10MB)
+                            </p>
+                        </div>
+
+                        <label class="doc-upload-btn">
+                            <i class="fa-solid fa-upload"></i>
+                            Subir archivo
+
+                            <input
+                                type="file"
+                                class="hidden doc-input"
+                                accept=".pdf,.jpg,.jpeg,.png"
+                            >
+                        </label>
+                    </div>
+
+                    <div
+                        class="doc-item"
+                        data-doc="licencia"
+                    >
+                        <span class="doc-icon">
+                            <i class="fa-regular fa-id-badge"></i>
+                        </span>
+
+                        <div class="doc-info">
+                            <p class="doc-name">
+                                Licencia como entrenador (opcional)
+                            </p>
+
+                            <p class="doc-hint">
+                                PDF, JPG, PNG (Máx. 10MB)
+                            </p>
+                        </div>
+
+                        <label class="doc-upload-btn">
+                            <i class="fa-solid fa-upload"></i>
+                            Subir archivo
+
+                            <input
+                                type="file"
+                                class="hidden doc-input"
+                                accept=".pdf,.jpg,.jpeg,.png"
+                            >
+                        </label>
+                    </div>
+
+                    <div
+                        class="doc-item"
+                        data-doc="cert-experiencia"
+                    >
+                        <span class="doc-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </span>
+
+                        <div class="doc-info">
+                            <p class="doc-name">
+                                Certificado de experiencia (opcional)
+                            </p>
+
+                            <p class="doc-hint">
+                                PDF, JPG, PNG (Máx. 10MB)
+                            </p>
+                        </div>
+
+                        <label class="doc-upload-btn">
+                            <i class="fa-solid fa-upload"></i>
+                            Subir archivo
+
+                            <input
+                                type="file"
+                                class="hidden doc-input"
+                                accept=".pdf,.jpg,.jpeg,.png"
+                            >
+                        </label>
+                    </div>
+
+                </div>
+            </section>
+
+            <section
+                class="step-panel"
+                data-panel="6"
+            >
+                <div class="final-step">
+
+                    <div class="final-icon">
+                        <i class="fa-regular fa-clipboard"></i>
+                    </div>
+
+                    <h1>
+                        ¡Casi listo!
+                    </h1>
+
+                    <p class="subtitle center">
+                        Revisa que toda tu información sea correcta antes de enviar tu inscripción.
+                    </p>
+
+                    <div class="final-checks">
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="acepto-terminos"
+                                required
+                            >
+                            Acepto los términos y condiciones *
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="acepto-privacidad"
+                                required
+                            >
+                            Acepto la política de privacidad *
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="acepto-datos"
+                                required
+                            >
+                            Autorizo el tratamiento de mis datos personales *
+                        </label>
+
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="acepto-imagen"
+                            >
+                            Autorizo el uso de mi imagen para fines promocionales (opcional)
+                        </label>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="btn-back"
+                    id="btn-back"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Volver
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-next"
+                    id="btn-next"
+                >
+                    <span id="btn-next-text">
+                        Siguiente
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </form>
+    </main>
+</div>
+
+<section class="success-screen hidden" id="success-screen">
+   
+    <img src="img/imgdp/Succefullbanner.jpg" alt="Fondo Registro" class="success-bg-img">
+
+
+    <div class="success-overlay"></div>
+
+    <div class="success-container">
+        
+  
+        <div class="success-content">
+            
+         
+            <div class="success-icon-wrapper">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+           
+            <h1>¡Registro completado!</h1>
+            <h2>Bienvenido a SPIN, entrenador</h2>
+
+            <p class="success-description">
+                Tu perfil ha sido creado correctamente.<br>
+                Ahora puedes comenzar a conectar con deportistas, equipos y nuevas oportunidades deportivas.
+            </p>
+
+            
+            <div class="success-review-box">
+                <p>
+                    Estamos revisando atentamente tu información. Te llegará un mensaje a 
+                    <strong id="user-email-display">tu correo registrado</strong> cuando todo esté listo.
+                </p>
+            </div>
+
+          
+            <div class="success-actions">
+                <button type="button" class="btn-success-primary" onclick="window.location.href='index.html'">
+                    Ir a mi perfil <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <button type="button" class="btn-success-secondary">
+                    Explorar la comunidad
+                </button>
+            </div>
+
+         
+            <p class="success-footer">
+                Conecta &nbsp;·&nbsp; Entrena &nbsp;·&nbsp; Crece
+            </p>
+        </div>
+
+      
+        <div class="success-decor-side">
+            
+            <!-- TEXTO DE FONDO TRANSLÚCIDO -->
+            <div class="watermark-text">COACH</div>
+
+            
+            <div class="floating-quote">
+                <p class="quote-handwritten">
+                    El deporte<br>
+                    también<br>
+                    se construye con<br>
+                    grandes guías
+                </p>
+                <div class="quote-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+            </div>
+
+     
+            <div class="floating-socials">
+                <a href="#" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="social-icon" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script src="JS/datosPersonales.js"></script>
+
+</body>
+
+<footer class="footer">
+
+    <div class="logofooter">
+        <img src="img/logo.jpg" alt="Logo SPIN">
+        <p>DALE UN GIRO A TU VIDA</p>
+    </div>
+
+    <div class="footer-section">
+        <h3>Navegación</h3>
+        <ul class="Navegacion">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Entrenadores</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Registro</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Sobre SPIN</h3>
+        <ul class="sobrespin">
+            <li><a href="Indexquienesomos.html">Quiénes somos</a></li>
+            <li><a href="#">Menciones legales</a></li>
+            <li><a href="#">Blog SPIN</a></li>
+            <li><a href="#">Únete a entrenadores especializados</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Contacto</h3>
+        <ul class="soporte">
+            <li>Centro de ayuda</li>
+            <li>spin</li>
+            <li>spin</li>
+            <li>SPIN</li>
+            <li>@spin</li>
+            <li>#spin</li>
+        </ul>
+    </div>
+
+    <div class="border">
+
+        <p>© SPIN, dale un giro a tu vida y mejora tu rendimiento.</p>
+
+        <div class="redes">
+            <a href="https://www.instagram.com/" title="Instagram">
+                <img src="Img/instagram.png" alt="Logo de Instagram">
+            </a>
+
+            <a href="https://www.tiktok.com/es/" title="TikTok">
+                <img src="Img/tik-tok.png" alt="Logo de TikTok">
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+</html>
+```
