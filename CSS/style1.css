@@ -90,57 +90,139 @@ a{
 
 /*footer*/
 
-.footer{
+/* FOOTER */
+
+.footer {
     background-color: #3d2174;
     color: #ffffff;
     font-family: "Mona Sans", sans-serif;
-}
 
-.footer{
     display: flex;
     justify-content: space-between;
-    padding: 35px;
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    padding: 40px 60px 20px;
 }
 
-.footer h3{
-    padding-bottom: 25px;
+
+/* LOGO */
+
+.logofooter {
+    width: 200px;
+}
+
+.logofooter img {
+    width: 150px;
+    height: 100px;
+
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.logofooter p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+
+/* SECCIONES DEL FOOTER */
+
+.footer-section {
+    min-width: 180px;
+}
+
+.footer h3 {
+    margin: 0 0 20px;
     font-family: "Boldonse", system-ui;
     font-size: 20px;
 }
 
-.footer ul{
+.footer ul {
     list-style: none;
+
     padding: 0;
     margin: 0;
 }
 
-.footer li{
-    font-size: 15px;
+.footer li {
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
-.Navegacion li:hover{
-    color: #C1FF72;
-}
 
-.sobrespin li:hover{
-    color: #C1FF72;
-}
+/* ENLACES */
 
-.soporte li:hover{
-    color: #C1FF72;
-}
-
-.border{
-    display: flex;
-    align-items: end;
-    background-color: #3d2174;
+.footer a {
     color: #ffffff;
-    padding: 10px;
+    text-decoration: none;
 }
 
-.border a{
+.footer a:hover {
+    color: #C1FF72;
+}
+
+
+/* CONTACTO */
+
+.soporte {
+    font-size: 14px;
+    color: #ffffff;
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.soporte li:hover {
+    color: #C1FF72;
+}
+
+
+/* PARTE INFERIOR */
+
+.border {
+    width: 100%;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    margin-top: 20px;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* REDES SOCIALES */
+
+.redes {
+    display: flex;
+    gap: 15px;
+}
+
+.border a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 35px;
+}
+
+.border img {
     width: 30px;
-    height:auto;
-    padding: 5px;
+    height: 30px;
+
+    object-fit: contain;
+
     filter: brightness(0) saturate(100%) invert(100%);
 }
