@@ -78,11 +78,11 @@ a{
     box-sizing: border-box;
 }
 
-.h1, h2 {
+h1, h2 {
     font-family:"Boldonse", system-ui;
 }
 
-.h3, h4, p{
+h3, h4, p{
     font-family: "Mona Sans", Arial, sans-serif;
 }
 
