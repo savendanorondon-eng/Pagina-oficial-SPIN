@@ -413,7 +413,8 @@ p{
 .pricing-wrap {
   max-width: 900px;
   margin: 0 auto;
-  padding: 84px 44px;
+  padding: 14px 44px;
+  width: 100%; 
 }
 
 .pricing-title {
@@ -423,6 +424,19 @@ p{
   margin: 0 0 32px;
 }
 
+.pricing-subtitle{
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0097b2;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: -20px 0 24px;
+}
+.pricing-nota{
+    font-size: 0.85rem;
+    color: #78716c;
+    margin: -20px 0 24px;
+}
 .pricing-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
