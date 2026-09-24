@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Mona Sans", sans-serif;
     background-color: white;
     margin: 0 auto;
 }
@@ -81,39 +81,40 @@ body{
 h1 {
     font-size: clamp(2rem, 3vw, 4rem);
 }
-h2 {
-    font-size: clamp(1.2rem, 1.5vw, 2rem);
+h2 { 
+    font-family: "Boldonse", sans-serif;
 }
 h3 {
     font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
-p {
-    font-size: clamp(0.7rem, 0.8vw, 1rem);
+p{
+    font-size: clamp(0.95rem, 0.95vw, 1.05rem);  
+    line-height: 1.6;
 }
 .hero{
-    display: flex;
+   display: flex;
     align-items: flex-start;
-    gap: 24px;
-    max-width: 1200px;
+    gap: 40px;
+    max-width: 2620px;
     margin: 0 auto;
-    padding: 24px;
+    padding: 15px;
 }
 
 .columna-contenido{
     flex: 1 1 400px;
     min-width: 0; 
     gap: 32px; 
-     display: flex;              
+    display: flex;              
     flex-direction: column;     
-    gap: 24px;
+    gap: 40px;
 }
 .promesa{
     width: 600px;
-    padding: 16px;
+    padding: 17px;
 }
 .promesa-text{
     color: #3d2174;
-    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-size: clamp(1.05rem, 5vw, 2.5rem);
     text-wrap: balance;
 }
 .perfil{
@@ -134,14 +135,14 @@ p {
     background: white;
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    padding: 24px;
-    width: 320px;
-    gap: 0.5rem;
+    padding: 42px;
+    width: 400px;
+    gap: 0.85rem;
 }
 
 .foto-perfil{
-    width: 100px;
-    height: 100px;
+    width: 210px;
+    height: 210px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 0.5rem;
@@ -156,18 +157,18 @@ p {
 }
 
 .nombre{
-    font-size: 1.25rem;
+    font-size: 1.8rem;
     font-weight: 700;
     margin: 0;
-    color: #1a1a1a;
+    color: #16121F;
 }
 
 .valoracion{
     display: flex;
     align-items: center;
     gap: 0.35rem;
-    font-size: 0.9rem;
-    color: #1a1a1a;
+    font-size: 1rem;
+    color: #16121F;
 }
 
 .estrella{
@@ -191,7 +192,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
 }
 
 .perfil-estadistica-row span:first-child{
@@ -206,12 +207,10 @@ p {
 .btn-contactar{
     width: 100%;
     margin-top: 1rem;
-    padding: 0.9rem;
-    background: #3d2174;
-    color: #c1ff72;
+    padding: 1.1rem;
     border: none;
     border-radius: 999px;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     cursor: pointer;
 }
@@ -236,7 +235,7 @@ p {
     background: none;
     border: none;
     cursor: pointer;
-    color: #1a1a1a;
+    color: #3d2174;
 }
 .icono-accion{
     width: 20px;
@@ -251,7 +250,7 @@ p {
 .pricing-free svg{
     width: 24px;
     height: 24px;
-    color: tomato;
+    color: #0097B2;
     flex-shrink: 0;
 }
 .embajador{
@@ -355,7 +354,7 @@ p {
     border: 1px solid #eee;
     border-radius: 12px;
     padding: 16px 20px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 .recomendacion1 .Perfil,
 .recomendacion2 .Perfil,
@@ -414,7 +413,7 @@ p {
 .pricing-wrap {
   max-width: 900px;
   margin: 0 auto;
-  padding: 64px 24px;
+  padding: 84px 44px;
 }
 
 .pricing-title {
@@ -424,10 +423,10 @@ p {
   margin: 0 0 32px;
 }
 
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
+.pricing-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+    gap: 20px; 
 }
 
 @media (max-width: 640px) {
@@ -443,7 +442,7 @@ p {
   background: #ffffff;
   border-radius: 12px;
   border: 1px solid #e7e5e4;
-  padding: 20px;
+  padding: 24px;
 }
 
 .pricing-card.featured {
@@ -653,17 +652,18 @@ p {
     width: 100%;
     margin-top: 1rem;
     padding: 0.9rem;
-    background: #c1ff72;
-    color: #3d2174;
+    background: #3d2174;
+    color: #ffffff;
     border: none;
     border-radius: 999px;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: color 0.2 ease 0.2s ease, transform 0.1s ease;
 }
 .btn-contactar:hover{
-    background-color: #769e42; 
+    background-color: #c1ff72; 
+    color: #3d2174;
 }
 .btn-contactar:active{
     transform: scale(0.97); 
@@ -676,7 +676,7 @@ p {
     background: none;
     border: none;
     cursor: pointer;
-    color: #1a1a1a;
+    color: #3d2174;
     transition: color 0.2s ease, transform 0.15s ease;
 }
 .acciones-tarjeta button:hover{
@@ -693,11 +693,12 @@ p {
     padding: 8px 16px;
     font-size: 0.85rem;
     cursor: pointer;
-    transition: border-color 0.2s ease, background-color 0.2s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease box-shadow 0.3s ease;
 }
 .acerca button:hover{
     border-color: #0097b2;
     background-color: #7be4f7;
+    box-shadow: 10px 10px 10px #0097B2;
 }
 .tarjeta-perfil{
     transition: box-shadow 0.25s ease;
@@ -785,4 +786,12 @@ p {
     font-size: 0.8rem;
     padding: 6px 12px;
 }
+}
+@media (min-width: 900px) {
+    .opinion-grid,
+    .recomendaciones-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
 }
