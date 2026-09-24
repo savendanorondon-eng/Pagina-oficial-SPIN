@@ -134,47 +134,85 @@ a{
 
 /*SECCION DE ENTRENADORES*/
 
-.Container{
-    background-color: rgb(240, 244, 246);
-    width: 400px;
-    margin: auto;
+.coachs{
     padding: 25px;
-    border: solid rgb(102, 102, 102) ;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgb(102, 102, 102)
 }
-.Img img{
-    margin: auto;
-    width: 400px;
-    height: auto;
+
+.coachs-title h3{
+    font-family: "Boldonse", system-ui;
+    font-size: 30px;
+}
+
+.section{
+    font-family: "Boldonse", system-ui;
+    font-size: 15px;
+    color:#3d2174
+}
+
+.coach-row{
     display:flex;
-    align-items: center;
+    justify-content:space-around;
 }
+
+.Container{
+    background-color: #ffff;
+    width: 400px;
+    margin: 15px;
+    border: solid #3d2174 ;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.Img{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.Img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
 .parrafo{
     display:flex;
     align-items: center;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Mona Sans", sans-serif;
 }
+
+.parrafo, .productoac{
+    padding:20px;
+}
+
 .productoac{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Mona Sans", sans-serif;
     display: flex;
     justify-content: space-between;
 }
-button{
-    background-color: rgb(160, 161, 160);
-    border-radius: 5px;
-    color: aliceblue;
+
+.productoac button{
+    background-color:#ffff ;
+    border-radius: 30px;
+    border:solid #3d2174;
+    color: #3d2174;
     padding: 10px;
     font-size: 20px;
 }
-h1{
+
+.parrafo h1{
+    font-family: "Boldonse", system-ui;
+    font-size:20px;
     display: flex;
     text-align: center;
 }
+
 .productoac button:hover{
-    background-color: rgb(54, 75, 120);
+    background-color: #3d2174;
+    color:#C1FF72
 }
 
 /* FOOTER */
