@@ -88,7 +88,7 @@ a{
 
 .REGISTRO {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 30px auto;
     background-color: white;
     border-radius: 20px;
@@ -99,15 +99,22 @@ a{
     flex: 1;
 }
 
-
-
-
 .PRIMERO {
-    width: 40%;
-    display: flex;
+    width: 35%;
     align-items: center;
-    gap: 20px;
-    padding-top: 10px;
+    justify-content: center;
+}
+
+.SEGUNDO {
+    width: 70%;
+}
+
+.PRIMERO img {
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(61, 33, 116, 0.45);
+   
 }
 
 .pregunta span {
@@ -124,31 +131,30 @@ a{
 }
 
 .texto h2 {
-    font-size: 22px;
-    color: #11164e;
+    font-size: 25px;
+    color: #3d2174;
     font-family: "Boldonse", system-ui;
 }
 
 .texto h1 {
-    font-size: 25px;
+    font-size: 28px;
     color: #0097b2;
     font-family: "Boldonse", system-ui;
 }
 
 .texto p {
     margin-top: 8px;
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
     font-family: "Mona Sans", sans-serif;
     text-align: left;
+    padding-bottom: 15px;
 }
 
 
 
 
-.SEGUNDO {
-    width: 60%;
-}
+
 
 
 
@@ -171,10 +177,9 @@ a{
     width: 100%;
     height: 100%;
     border: none;
-    outline: none;
     background-color: transparent;
     padding: 0 15px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Mona Sans", sans-serif;
     color: #11164e;
 }
@@ -217,7 +222,7 @@ a{
 
 .DEPORTISTAS h3,.ENTRENADORES h3,.CLUBS h3 {
     font-family: "Mona Sans", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .ACTIVO {
@@ -241,7 +246,7 @@ a{
 
 
 .FRECUENTES h3 {
-    font-size: 21px;
+    font-size: 22px;
     margin-bottom: 15px;
     font-family: "Mona Sans", sans-serif;
 }
@@ -265,7 +270,7 @@ a{
 .carta {
     width: 50%;
     min-height: 105px;
-    border: 1px solid #e2e5ed;
+    border: 2px solid #e2e5ed9f;
     border-radius: 13px;
     padding: 15px;
     display: flex;
@@ -327,12 +332,12 @@ a{
 
 .informacion h4 {
     font-family: "Mona Sans", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #3d2174;
 }
 
 .informacion p {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.4;
     color: #000000;
     font-family: "Mona Sans", sans-serif;
@@ -358,13 +363,13 @@ a{
 }
 
 .CONTACTA .info h4 {
-    font-size: 14px;
+    font-size: 16px;
     color: #11164e;
     margin-bottom: 5px;
 }
 
 .CONTACTA .info p {
-    font-size: 12px;
+    font-size: 15px;
     color: #000000;
     text-align: left;
 }
@@ -377,12 +382,13 @@ a{
     border: none;
     border-radius: 20px;
     width: 100%;
-    padding: 11px 18px;
+    padding: 11px 10px;
     background-color: #c1ff72;
     color: #11164e;
     font-weight: bold;
     cursor: pointer;
     font-family: "Mona Sans", sans-serif;
+    font-size: 15px;
     transition: 0.3s ease;
     margin: 0;
 }
