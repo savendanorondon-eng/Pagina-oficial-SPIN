@@ -136,6 +136,8 @@ a{
 
 .coachs{
     padding: 25px;
+    max-width: 1400px;
+    margin: 30px auto;
 }
 
 .coachs-title h3{
@@ -158,8 +160,8 @@ a{
     background-color: #ffff;
     width: 400px;
     margin: 15px;
-    border: solid #3d2174 ;
-    border-radius: 15px;
+    border: 2px solid #3d2174;
+    border-radius: 13px;
     overflow: hidden;
 }
 
@@ -185,7 +187,8 @@ a{
 }
 
 .parrafo, .productoac{
-    padding:20px;
+    padding-inline:20px;
+    padding-bottom:10px;
 }
 
 .productoac{
@@ -215,6 +218,58 @@ a{
     color:#C1FF72
 }
 
+/*SECCION COMUNIDAD REGISTRO ENTRENADORES*/
+
+.community{
+    display:flex;
+    justify-content: space-between;
+    border: solid #3d2174;
+    border-radius:25px;
+    background-color:#3d2174;
+    max-width:1400px;
+    margin: 30px;
+    margin-inline:180px;
+    overflow:hidden;
+}
+
+.text-community{
+    padding: 20px;
+    color:#ffffff
+}
+
+.text-community p{
+    margin-top:20px;
+    margin-bottom:20px;
+    font-family:"mona sans", sans-serif;
+}
+
+.text-community button{
+    padding: 10px 10px;
+    border-radius: 30px;
+    font-family: "mona sans", sans-serif;
+    font-size:20px;
+    background-color:#3d2174;
+    color:#ffffff;
+    border:solid #3d2174;
+
+    font-weight:bold;
+    transition: background-color 0.5s ease;
+}
+
+.text-community button:hover{
+    background-color:#C1FF72;
+    color:#3d2174;
+}
+
+.text-community h1{
+    font-family: "Boldonse", system-ui;
+}
+
+.img-community img{
+    width:600px;
+    height: 300px;
+    object-fit: cover;
+}
 /* FOOTER */
 
 .footer {
