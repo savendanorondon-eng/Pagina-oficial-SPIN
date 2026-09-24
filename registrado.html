@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width",initial-scale="1.0">
+    <title>Portafolio</title>
+    <meta name="description" content=" Portafolio de diseño grafico, de un estudiante de producciòn multimedial">
+    <link rel="icon" href="isotipo_editable.svg" type="image/svg">
+    <link rel="stylesheet" href="CSS/registrado.css">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- HEDER-->
+
+     <header class="header">
+
+        <div class="logo">
+            <img src="img/logo de SPIN.png" alt="logo.oficial.SPIN">
+        </div>
+
+<!--MENU DE NAVEGACION-->
+
+        <nav class="nav">
+
+            <a href="datosPersonales.html">Datos personales</a>
+            <a href="Menu.html">inicio</a>
+            <a href="Indexquienesomos.html">Quienes somos</a>
+    
+        </nav>
+
+        <a href="datosPersonales.html" class="header-button">Unete a SPIN</a>
+
+     </header>
+     <section class="cuenta-info">
+        <div class="cuenta-grid">
+
+            <div class="cuenta-formulario">
+                <h2 class="cuenta-titulo">Información General 😊</h2>
+
+                <form class="form-general">
+                    <div class="campo">
+                        <select name="sexo" required>
+                            <option value="" disabled selected>Sexo</option>
+                            <option value="mujer">Mujer</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <input type="text" name="nombre" placeholder="Nombre">
+                    </div>
+
+                    <div class="campo">
+                        <input type="text" name="apellido" placeholder="Apellido">
+                    </div>
+
+                    <div class="campo">
+                        <input type="date" name="nacimiento">
+                    </div>
+
+                    <div class="campo campo-verificado">
+                        <input type="email" name="email" placeholder="Correo electrónico">
+                        <svg class="icono-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+
+                    <div class="campo campo-telefono">
+                        <select class="prefijo">
+                            <option>🇨🇴 +57</option>
+                            <option>🇲🇽 +52</option>
+                            <option>🇦🇷 +54</option>
+                            <option>🇨🇱 +56</option>
+                        </select>
+                        <input type="tel" name="telefono" placeholder="Número de teléfono">
+                        <svg class="icono-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+
+                    <button type="submit" class="btn-validar">Validar</button>
+                </form>
+            </div>
+
+            <div class="cuenta-foto">
+                <h2 class="cuenta-titulo">Foto de perfil 📷</h2>
+
+                <div class="foto-perfil-card">
+                    <div class="foto-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+                        </svg>
+                    </div>
+                    <button class="btn-camara" aria-label="Cambiar foto de perfil">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2Z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+     <footer class="footer">
+
+        <div class="logofooter">
+            <img src="img/logo de SPIN.png" alt="Logo SPIN">
+            <p>DALE UN GIRO A TU VIDA</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Navegación</h3>
+            <ul class="Navegacion">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Entrenadores</a></li>
+                <li><a href="#">Deportes</a></li>
+                <li><a href="#">Registro</a></li>
+            </ul>
+        </div>     
+        <div class="footer-section">
+            <h3>Sobre SPIN</h3>
+            <ul class="sobrespin">
+                <li><a href="Indexquienesomos.html">Quiénes somos</a></li>
+                <li><a href="#">Menciones legales</a></li>
+                <li><a href="#">Blog SPIN</a></li>
+                <li><a href="#">Únete a entrenadores especializados</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contacto</h3>
+            <ul class="soporte">
+                <li>Centro de ayuda</li>
+                <li>spin</li>
+                <li>spin</li>
+                <li>SPIN</li>
+                <li>@spin</li>
+                <li>#spin</li>
+            </ul>
+        </div>
+
+        <div class="border">
+
+            <p>© SPIN, dale un giro a tu vida y mejora tu rendimiento.</p>
+
+            <div class="redes">
+                <a href="https://www.instagram.com/" title="Instagram">
+                    <img src="Img/instagram.png" alt="Logo de Instagram">
+                </a>
+
+                <a href="https://www.tiktok.com/es/" title="TikTok">
+                    <img src="Img/tik-tok.png" alt="Logo de TikTok">
+                </a>
+            </div>
+
+        </div>
+
+    </footer> 
+</body>
+</html>
