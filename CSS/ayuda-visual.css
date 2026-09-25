@@ -20,31 +20,6 @@ a{
     color: inherit;
 }
  
-/* Clase utilitaria para texto solo-lector-de-pantalla (ej. labels visualmente ocultas) */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
- 
-/* Foco visible global y consistente para navegación por teclado (WCAG 2.4.7 / 2.4.11) */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible,
-[tabindex]:focus-visible {
-    outline: 3px solid #C1FF72;
-    outline-offset: 3px;
-    border-radius: 4px;
-}
- 
 .navbar{
     font-family: "Mona Sans", sans-serif;
     font-weight: 400;
@@ -155,8 +130,7 @@ textarea:focus-visible,
     flex-shrink: 0;
 }
  
-/* Título del bloque hero: la línea superior (.pretitulo) ya no es un h2,
-   solo texto de apoyo antes del h1 real ("ayudarte?") */
+
 .texto .pretitulo {
     font-size: 25px;
     color: #3d2174;
@@ -166,7 +140,7 @@ textarea:focus-visible,
  
 .texto h1 {
     font-size: 28px;
-    color: #0097b2;
+    color: #121313;
     font-family: "Boldonse", system-ui;
 }
  
@@ -242,8 +216,7 @@ textarea:focus-visible,
     cursor: pointer;
 }
  
-/* Las pestañas Deportistas/Entrenadores/Clubs son controles de navegación,
-   no encabezados de contenido: ahora son <span> dentro del <a> */
+
 .DEPORTISTAS span,.ENTRENADORES span,.CLUBS span {
     font-family: "Mona Sans", sans-serif;
     font-size: 16px;
@@ -269,7 +242,6 @@ textarea:focus-visible,
  
  
  
-/* "Preguntas frecuentes" es la sección principal del contenido: h2 */
 .FRECUENTES h2 {
     font-size: 22px;
     margin-bottom: 15px;
@@ -355,7 +327,6 @@ textarea:focus-visible,
  
  
  
-/* Título de cada tarjeta: subsección dentro de "Preguntas frecuentes" -> h3 */
 .informacion h3 {
     font-family: "Mona Sans", sans-serif;
     font-size: 16px;
@@ -519,8 +490,7 @@ textarea {
     height: 100px;
 }
  
-/* Botón de envío del formulario: ahora es un único elemento (button o a.boton-enviar),
-   ya no <button><a>...</a></button> */
+
 .formulario button,
 .formulario .boton-enviar {
     display: block;
@@ -544,7 +514,28 @@ textarea {
     color: black;
 }
  
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
  
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid #C1FF72;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
  
 .footer {
     background-color: #3d2174;
@@ -575,7 +566,7 @@ textarea {
     margin-top: 15px;
 }
  
-/* SECCIONES DEL FOOTER */
+
  
 .footer-section {
     min-width: 180px;
@@ -599,9 +590,6 @@ textarea {
     margin-bottom: 10px;
 }
  
- 
-/* ENLACES */
- 
 .footer a {
     color: #ffffff;
     text-decoration: none;
@@ -610,9 +598,6 @@ textarea {
 .footer a:hover {
     color: #C1FF72;
 }
- 
- 
-/* CONTACTO */
  
 .soporte {
     font-size: 14px;
@@ -629,8 +614,6 @@ textarea {
 }
  
  
-/* PARTE INFERIOR */
- 
 .border {
     width: 100%;
     background-color: #3d2174;
@@ -646,8 +629,6 @@ textarea {
     margin: 0;
     font-size: 14px;
 }
- 
- 
  
 .redes {
     display: flex;
@@ -668,10 +649,7 @@ textarea {
     object-fit: contain;
     filter: brightness(0) saturate(100%) invert(100%);
 }
- 
-/* ============ MEDIA QUERIES (consolidadas — antes había reglas duplicadas
-   con puntos de quiebre distintos para el mismo elemento; ahora hay un único
-   bloque por breakpoint) ============ */
+
  
 @media (max-width: 1100px){
     .nav-links{
@@ -704,7 +682,7 @@ textarea {
     }
 }
  
-/* ===== 900px: tablets ===== */
+
 @media (max-width: 900px){
     .nav-links{
         gap: 20px;
@@ -718,7 +696,6 @@ textarea {
         padding: 8px 16px;
     }
  
-    /* Las columnas se apilan */
     .REGISTRO,
     .formulario{
         flex-direction: column;
@@ -743,7 +720,6 @@ textarea {
         width: 100%;
     }
  
-    /* Tarjetas de resultados frecuentes apiladas */
     .contenedor{
         flex-direction: column;
         gap: 15px;
@@ -769,7 +745,6 @@ textarea {
     }
 }
  
-/* ===== 600px: celulares ===== */
 @media (max-width: 600px){
     .navbar{
         padding: 10px;
@@ -782,7 +757,6 @@ textarea {
         padding: 8px 14px;
     }
  
-    /* Menú convertido en barra scrollable */
     .nav-links{
         order: 3;
         width: 100%;
