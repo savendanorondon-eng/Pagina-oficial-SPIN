@@ -262,9 +262,9 @@ h3, h4, p{
     color: #3d2174;
 }
  
-.parte1 h4, .parte2 h4, .parte3 h4, .parte4 h4,
-.fase1 h4, .fase2 h4, .fase3 h4, .fase4 h4,
-.apartado1 h4, .apartado2 h4, .apartado3 h4, .apartado4 h4 {
+.parte1 h3, .parte2 h3, .parte3 h3, .parte4 h3,
+.fase1 h3, .fase2 h3, .fase3 h3, .fase4 h3,
+.apartado1 h3, .apartado2 h3, .apartado3 h3, .apartado4 h3 {
     font-size: 13px;
     margin-bottom: 3px;
 }

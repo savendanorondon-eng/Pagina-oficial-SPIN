@@ -108,7 +108,8 @@ h3, h4, p{
     margin-top: 20px;
 }
 
-.arriba h3 {
+.arriba h2 {
+    font-family: "Mona Sans", Arial, sans-serif;
     font-size: 17px;
     font-weight: bold;
     margin-top: 20px;
@@ -145,13 +146,13 @@ h3, h4, p{
     text-align: center;
 }
  
-.medio .texto h3 {
+.medio .texto h2 {
     color: #ffffff;
     font-size: 24px;
     font-weight: bold;
 }
  
-.medio .texto h2 {
+.medio .texto h3 {
     color: #0097B2;
     font-size: 32px;
 }
@@ -211,14 +212,14 @@ h3, h4, p{
     text-align: left;
 }
  
-.frase1 h3 {
+.frase1 h2 {
     font-size: 30px;
     font-weight: bold;
     color: #3d2174;
     margin: 0;
 }
  
-.frase1 h2 {
+.frase1 h3 {
     font-size: 52px;
     color: #0097B2;
     font-weight: bold;
