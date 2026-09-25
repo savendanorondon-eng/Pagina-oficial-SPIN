@@ -1,18 +1,9 @@
-img{
-    width: 100%;
-    display: block;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-.header{
+.navbar{
     font-family: "Mona Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
@@ -21,33 +12,22 @@ a{
     color: #0097B2;
 }
 
-.logo{
-     display: flex;
-    justify-content:space-between;
-    align-items: center;
-    gap: 14px;
-}
-
-.logo img{
-    width: 100px;
-    height: auto;
-}
-
-.nav{
+.nav-links{
     display: flex;
     align-items: center;
     gap: 35px;
     margin-left: auto;
-    margin-right: 60px
+    margin-right: 60px;
 }
 
-.nav a{
+.nav-links a{
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
+    white-space: nowrap;
 }
 
-.nav a:hover{
+.nav-links a:hover{
     border-bottom: 2px solid #C1FF72;
     padding-bottom: 8px;
     color: #C1FF72;
@@ -57,7 +37,7 @@ a{
     background: #3d2174;
     padding: 10px 22px;
     border-radius: 30px;
-    border:solid #3d2174;
+    border: solid #3d2174;
     font-size: 20px;
     font-weight: bold;
     display: flex;
@@ -69,7 +49,7 @@ a{
 .header-button:hover{
     background-color: #3d2174;
     color: #C1FF72;
-    border:solid #C1FF72;
+    border: solid #C1FF72;
 }
 
 * {
@@ -488,25 +468,16 @@ h3, h4, p{
  
 @media (max-width: 900px) {
  
-    .header {
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px;
-    }
- 
-    .nav {
-        margin: 0;
+    .nav-links{
         gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
+        margin-right: 24px;
     }
- 
-    .nav a {
+    .nav-links a{
         font-size: 16px;
     }
- 
-    .header-button {
+    .header-button{
         font-size: 16px;
+        padding: 8px 16px;
     }
  
     .principal {
@@ -637,17 +608,38 @@ h3, h4, p{
         font-size: 22px;
     }
  
-    .header-button {
-        padding: 8px 16px;
-        font-size: 14px;
+    .navbar{
+        padding: 10px;
     }
- 
-    .nav a {
-        font-size: 14px;
+    .logo img{
+        width: 70px;
     }
- 
-    .navegacion a {
+    .header-button{
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+    
+    .nav-links{
+        order: 3;
+        width: 100%;
+        margin: 4px 0 0;
+        padding: 7px 0 3px;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar{
+        display: none;
+    }
+    .nav-links a{
         font-size: 11px;
-        padding: 6px 10px;
+        padding: 5px 4px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .nav-links a:hover{
+        padding-bottom: 6px;
     }
 }
