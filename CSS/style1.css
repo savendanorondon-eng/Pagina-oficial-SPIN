@@ -406,3 +406,140 @@ a{
 
     filter: brightness(0) saturate(100%) invert(100%);
 }
+/*Responsive*/
+/* ===================== TABLETS (≤ 900px) ===================== */
+@media (max-width: 900px) {
+
+    /* --- Navbar: bajamos tamaños para que quepa todo --- */
+    .nav{
+        gap: 20px;
+        margin-right: 24px;
+    }
+    .nav a{
+        font-size: 16px;
+    }
+    .header-button{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    /* --- Tarjetas de entrenadores: pasan a grilla que se ajusta sola --- */
+    .coach-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);   /* 2 columnas en tablet */
+        justify-content: center;
+        gap: 20px;
+    }
+    .Container{
+        width: 100%;      /* ya no 400px fijo, ocupa su celda de la grilla */
+        margin: 0;
+    }
+
+    /* --- Comunidad: menos márgenes laterales, se apila --- */
+    .community{
+        flex-direction: column;
+        margin-inline: 40px;
+    }
+    .img-community img{
+        width: 100%;      /* ya no 600px fijo */
+        height: auto;
+    }
+
+    /* --- Footer: 2 columnas en vez de 4 en fila apretada --- */
+    .footer{
+        justify-content: flex-start;
+        gap: 32px;
+    }
+}
+
+/* ===================== CELULARES (≤ 480px) ===================== */
+@media (max-width: 480px) {
+
+    /* --- Navbar: el texto de los links es lo primero que hay que ocultar/simplificar --- */
+    .header{
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .nav{
+        display: none;   /* en celular muy angosto, ocultamos el menú de texto */
+    }
+    .logo img{
+        width: 70px;
+    }
+    .header-button{
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+
+    /* --- Carrusel: baja un poco de alto --- */
+    .page-carrusel, .container-img{
+        height: 220px;
+    }
+
+    /* --- Tarjetas de entrenadores: 1 sola columna --- */
+    .coach-row{
+        grid-template-columns: 1fr;
+    }
+    .coachs{
+        padding: 16px;
+    }
+    .coachs-title h3{
+        font-size: 22px;
+    }
+
+    /* --- Comunidad: márgenes mínimos, texto centrado --- */
+    .community{
+        margin-inline: 16px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .text-community{
+        padding: 16px;
+    }
+    .text-community h1{
+        font-size: 1.4rem;
+    }
+
+    /* --- Footer: todo en una sola columna --- */
+    .footer{
+        flex-direction: column;
+        padding: 32px 24px 16px;
+        gap: 24px;
+    }
+    .border{
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+@media (max-width: 900px) {
+    .coach-row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        gap: 20px;
+    }
+    .Container{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .coach-row{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 900px) {
+    .productoac{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .productoac h3{
+        text-align: center;
+    }
+    .productoac button{
+        width: 100%;
+    }
+}
