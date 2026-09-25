@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ayuda</title>
+    <title>Formulario de quejas de SPIN</title>
     <link rel="stylesheet" href="CSS/ayuda-visual.css">
     <script src="https://kit.fontawesome.com/e237d3526e.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,54 +14,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 </head>
 
-<!-- HEDER-->
-
     <header class="navbar">
         <div class="logo">
             <img src="img/logo de SPIN.png" alt="logo.oficial.SPIN">
         </div>
-
+ 
         <nav class="nav-links" id="nav-links">
             <a href="ayuda.html">Ayuda</a>
             <a href="Index.html">inicio</a>
             <a href="Indexquienesomos.html">Quienes somos</a>
         </nav>
-
+ 
         <a href="registrado.html" class="header-button">Unete a SPIN</a>
     </header>
 
-<!--BODY-->
-
 <body>
+
 <div class="REGISTRO" id="ayuda">
     <div class="formulario">
 
         <div class="SEGUNDO-FORMULARIO">
-            <img src="img/formulario-ayuda.jpeg" alt="Queja">
+            <img src="img/formulario-ayuda.jpeg" alt="Un hombre con una expresion seria y con los brazos cruzados">
         </div>
 
-        <div class="PRIMERO-FORMULARIO">
-
-            <h1>FORMULARIO DE QUEJAS</h1>
-            <p>Cuéntanos qué ocurrió y cómo podemos ayudarte.</p>
-
-                <form>
-
-                    <label>Nombre completo</label>
-                    <input type="text" placeholder="Escribe tu nombre">
-
-                    <label>Correo electrónico</label>
-                    <input type="email" placeholder="Escribe tu correo">
-
-                    <label>Tipo de usuario</label>
-                    <select>
+           <div class="PRIMERO-FORMULARIO">
+ 
+                <h1>FORMULARIO DE QUEJAS</h1>
+                <p>Cuéntanos qué ocurrió y cómo podemos ayudarte.</p>
+ 
+                <form action="ayuda.html" method="get">
+ 
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" autocomplete="name" required>
+ 
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="Escribe tu correo" autocomplete="email" required>
+ 
+                    <label for="tipo-usuario">Tipo de usuario</label>
+                    <select id="tipo-usuario" name="tipo-usuario">
                         <option>Deportista</option>
                         <option>Entrenador</option>
                         <option>Club deportivo</option>
                     </select>
-
-                    <label>Motivo de la queja</label>
-                    <select>
+ 
+                    <label for="motivo">Motivo de la queja</label>
+                    <select id="motivo" name="motivo">
                         <option>Problema con una reserva</option>
                         <option>Problema con un pago</option>
                         <option>Problema con un entrenador</option>
@@ -70,80 +67,79 @@
                         <option>Problema con la plataforma</option>
                         <option>Otro</option>
                     </select>
-
-                    <label>Cuéntanos qué ocurrió</label>
-                    <textarea placeholder="Escribe aquí tu queja..."></textarea>
-
-                    <label>Fecha del inconveniente</label>
-                    <input type="date">
-
-                    <button><a href="ayuda.html">Enviar queja</a></button>
-
+ 
+                    <label for="detalle">Cuéntanos qué ocurrió</label>
+                    <textarea id="detalle" name="detalle" placeholder="Escribe aquí tu queja..."></textarea>
+ 
+                    <label for="fecha">Fecha del inconveniente</label>
+                    <input type="date" id="fecha" name="fecha">
+ 
+                    <button type="submit">Enviar queja</button>
+ 
                 </form>
-        
+ 
+            </div>
         </div>
     </div>
-</div>
-
+ 
 </body>
 
-<!--FOOTER-->
-
-<footer class="footer">
-
-    <div class="logofooter">
-        <img src="img/logo de SPIN.png" alt="Logo SPIN">
-        <p>DALE UN GIRO A TU VIDA</p>
-    </div>
-
-    <div class="footer-section">
-        <h3>Navegación</h3>
-        <ul class="Navegacion">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="ayuda.html">Entrenadores</a></li>
-            <li><a href="servicios.html">Deportes</a></li>
-            <li><a href="registrado.html">Registro</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-section">
-        <h3>Sobre SPIN</h3>
-        <ul class="sobrespin">
-            <li><a href="Indexquienesomos.html">Quiénes somos</a></li>
-            <li><a href="centrolegal.html">Menciones legales</a></li>
-            <li><a href="blogspin.html">Blog SPIN</a></li>
-            <li><a href="datosPersonales.html">Únete a entrenadores especializados</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-section">
-        <h3>Contacto</h3>
-        <ul class="soporte">
-            <li><a href="ayuda.html">Centro de ayuda</a></li>
-            <li><a href="mailto:aspin@spin.com">aspin@spin.com</a></li>
-            <li><a href="mailto:spin@spin.com">spin@spin.com</a></li>
-            <li><a href="mailto:SPIN@spin.com">SPIN@spin.com</a></li>
-            <li><a href="https://twitter.com/spin" target="_blank">@spin</a></li>
-            <li><a href="https://www.instagram.com/spin/" target="_blank">#spin</a></li>
-        </ul>
-    </div>
-
-    <div class="border">
-
-        <p>© SPIN, dale un giro a tu vida y mejora tu rendimiento.</p>
-
-        <div class="redes">
-            <a href="https://www.instagram.com/" title="Instagram">
-                <img src="Img/instagram.png" alt="Logo de Instagram">
-            </a>
-
-            <a href="https://www.tiktok.com/es/" title="TikTok">
-                <img src="Img/tik-tok.png" alt="Logo de TikTok">
-            </a>
+    <footer class="footer">
+ 
+        <div class="logofooter">
+            <img src="img/logo de SPIN.png" alt="Logo SPIN">
+            <p>DALE UN GIRO A TU VIDA</p>
         </div>
-
-    </div>
-
-</footer>
-
+ 
+        <div class="footer-section">
+            <h3>Navegación</h3>
+            <ul class="Navegacion">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ayuda.html">Entrenadores</a></li>
+                <li><a href="servicios.html">Deportes</a></li>
+                <li><a href="registrado.html">Registro</a></li>
+            </ul>
+        </div>
+ 
+        <div class="footer-section">
+            <h3>Sobre SPIN</h3>
+            <ul class="sobrespin">
+                <li><a href="Indexquienesomos.html">Quiénes somos</a></li>
+                <li><a href="centrolegal.html">Menciones legales</a></li>
+                <li><a href="blogspin.html">Blog SPIN</a></li>
+                <li><a href="datosPersonales.html">Únete a entrenadores especializados</a></li>
+            </ul>
+        </div>
+ 
+        <div class="footer-section">
+            <h3>Contacto</h3>
+            <ul class="soporte">
+                <li><a href="ayuda.html">Centro de ayuda</a></li>
+                <li><a href="mailto:aspin@spin.com">aspin@spin.com</a></li>
+                <li><a href="mailto:spin@spin.com">spin@spin.com</a></li>
+                <li><a href="mailto:SPIN@spin.com">SPIN@spin.com</a></li>
+                <li><a href="https://twitter.com/spin" target="_blank" rel="noopener noreferrer">@spin</a></li>
+                <li><a href="https://www.instagram.com/spin/" target="_blank" rel="noopener noreferrer">#spin</a></li>
+            </ul>
+        </div>
+ 
+        <div class="border">
+ 
+            <p>© SPIN, dale un giro a tu vida y mejora tu rendimiento.</p>
+ 
+            <div class="redes">
+                <a href="https://www.instagram.com/" title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <img src="Img/instagram.png" alt="Instagram">
+                </a>
+ 
+                <a href="https://www.tiktok.com/es/" title="TikTok" target="_blank" rel="noopener noreferrer">
+                    <img src="Img/tik-tok.png" alt="TikTok">
+                </a>
+            </div>
+ 
+        </div>
+ 
+    </footer>
+ 
 </html>
+ 
