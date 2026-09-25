@@ -1,3 +1,8 @@
+
+/* ==========================================================================
+   1. BASE
+   ========================================================================== */
+
 *{
     padding: 0;
     margin: 0;
@@ -15,11 +20,13 @@ body{
     margin: 0 auto;
     padding: 0 24px;
 }
+
 .header{
     font-family: "Mona Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
@@ -29,8 +36,8 @@ body{
 }
 
 .logo{
-     display: flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 14px;
 }
@@ -45,77 +52,104 @@ body{
     align-items: center;
     gap: 35px;
     margin-left: auto;
-    margin-right: 60px
+    margin-right: 60px;
 }
 
-.nav-links {
-        display: flex;
-        order: 3;
-        width: 100%;
-        margin: 4px 0 0;
-        padding: 7px 0 3px;
-        gap: 8px;
-        justify-content: center;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scrollbar-width: none;
+.nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 35px;
+    margin: 0 60px 0 0;
+    padding: 0 0 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
-.nav-links::-webkit-scrollbar {
-        display: none;
+.nav-links::-webkit-scrollbar{
+    display: none;
 }
-.nav a{
+
+/* Enlaces del menú en reposo */
+.nav a,
+.nav-links a{
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
     font-size: 20px;
     font-weight: bold;
-    color: #ffffff;
-}
-.nav-links a {
-    font-size: 11px;
     padding: 5px 4px;
     white-space: nowrap;
     flex-shrink: 0;
+    transform: translateY(0);
+    transition: color 0.2s ease, transform 0.2s ease;
 }
-.nav a:hover{
-    border-bottom: 2px solid #C1FF72;
-    padding-bottom: 8px;
+.nav a::after,
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: #C1FF72;
+    opacity: 0;
+}
+.nav a:hover,
+.nav-links a:hover{
     color: #C1FF72;
+    transform: translateY(-3px);
 }
 
-.nav-links a:hover {
-    padding-bottom: 6px;
+.nav a:hover::after,
+.nav-links a:hover::after{
+    opacity: 1;
 }
+
 .header-button{
     background: #3d2174;
     padding: 10px 22px;
     border-radius: 30px;
-    border:solid #3d2174;
+    border: solid #3d2174;
     font-size: 20px;
     font-weight: bold;
     display: flex;
     align-items: center;
     gap: 20px;
     color: #ffffff;
+    margin-left: auto;
+    white-space: nowrap;
 }
 
 .header-button:hover{
     background-color: #3d2174;
     color: #C1FF72;
-    border:solid #C1FF72;
+    border: solid #C1FF72;
 }
+/* ==========================================================================
+   3. TIPOGRAFÍA
+   ========================================================================== */
+
 h1 {
     font-size: clamp(2rem, 3vw, 4rem);
 }
-h2 { 
+h2 {
     font-family: "Boldonse", sans-serif;
 }
 h3 {
     font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 p{
-    font-size: clamp(0.95rem, 0.95vw, 1.05rem);  
+    font-size: clamp(0.95rem, 0.95vw, 1.05rem);
     line-height: 1.6;
 }
+
+/* ==========================================================================
+   4. HERO Y CONTENIDO PRINCIPAL
+   ========================================================================== */
+
 .hero{
-   display: flex;
+    display: flex;
     align-items: flex-start;
     gap: 40px;
     max-width: 2620px;
@@ -125,10 +159,10 @@ p{
 
 .columna-contenido{
     flex: 1 1 400px;
-    min-width: 0; 
-    gap: 32px; 
-    display: flex;              
-    flex-direction: column;     
+    min-width: 0;
+    gap: 32px;
+    display: flex;
+    flex-direction: column;
     gap: 40px;
 }
 .promesa{
@@ -140,6 +174,11 @@ p{
     font-size: clamp(1.05rem, 5vw, 2.5rem);
     text-wrap: balance;
 }
+
+/* ==========================================================================
+   5. TARJETA DE PERFIL
+   ========================================================================== */
+
 .perfil{
     display: flex;
     justify-content: center;
@@ -228,9 +267,9 @@ p{
 }
 
 .btn-contactar{
-    display: inline-block;      
-    text-align: center;         
-    text-decoration: none; 
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     width: 100%;
     margin-top: 1rem;
     padding: 1.1rem;
@@ -267,18 +306,11 @@ p{
     width: 20px;
     height: 20px;
 }
-.pricing-icon{
-    width: 24px;
-    height: 24px;
-    color: tomato;
-    margin-bottom: 8px;
-}
-.pricing-free svg{
-    width: 24px;
-    height: 24px;
-    color: #0097B2;
-    flex-shrink: 0;
-}
+
+/* ==========================================================================
+   6. EMBAJADOR Y ACERCA DE
+   ========================================================================== */
+
 .embajador{
     background: #f3f0ff;
     border-radius: 12px;
@@ -305,19 +337,20 @@ p{
     color: #1a1a1a;
     font-size: 0.9rem;
 }
+
 .acerca{
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     gap: 12px;
     align-items: flex-start;
 }
 .acerca-niveles{
     display: flex;
     gap: 8px;
-    flex-wrap: wrap;         
+    flex-wrap: wrap;
 }
 .acerca button{
-    display: flex;            
+    display: flex;
     align-items: center;
     gap: 6px;
     border-radius: 999px;
@@ -325,6 +358,11 @@ p{
     font-size: 0.85rem;
     cursor: pointer;
 }
+
+/* ==========================================================================
+   7. CALIFICACIONES, OPINIONES Y RECOMENDACIONES
+   ========================================================================== */
+
 .calificacion{
     display: flex;
     align-items: center;
@@ -433,19 +471,24 @@ p{
 .respuesta{
     background: #fafafa;
     margin-left: 24px;
-}   
+}
+
+/* ==========================================================================
+   8. PRECIOS
+   ========================================================================== */
+
 .pricing-wrap {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 14px 44px;
-  width: 100%; 
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 14px 44px;
+    width: 100%;
 }
 
 .pricing-title {
-  font-size: clamp(1.4rem, 3vw, 1.75rem);
-  font-weight: 500;
-  color: #1c1917;
-  margin: 0 0 32px;
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-weight: 500;
+    color: #1c1917;
+    margin: 0 0 32px;
 }
 
 .pricing-subtitle{
@@ -463,110 +506,107 @@ p{
 }
 .pricing-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
-    gap: 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 @media (max-width: 640px) {
-  .pricing-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .pricing-card {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid #e7e5e4;
-  padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e7e5e4;
+    padding: 24px;
 }
 
 .pricing-card.featured {
-  border: 2px solid #0097b2;
+    border: 2px solid #0097b2;
 }
 
 .pricing-badge {
-  align-self: flex-start;
-  background: #ecfdf5;
-  color: #0097b2;
-  font-size: 0.75rem;
-  padding: 4px 12px;
-  border-radius: 6px;
-  margin-bottom: 4px;
+    align-self: flex-start;
+    background: #ecfdf5;
+    color: #0097b2;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+    margin-bottom: 4px;
 }
 
 .pricing-icon {
-  width: 20px;
-  height: 20px;
-  color: #3d2174;
-  margin-top: 2px;
+    width: 20px;
+    height: 20px;
+    color: #3d2174;
+    margin-top: 2px;
 }
 
 .pricing-label {
-  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
-  color: #78716c;
-  margin: 4px 0 0;
+    font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+    color: #78716c;
+    margin: 4px 0 0;
 }
 
 .pricing-price {
-  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
-  font-weight: 500;
-  color: #1c1917;
-  margin: 0;
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+    font-weight: 500;
+    color: #1c1917;
+    margin: 0;
 }
 
 .pricing-detail {
-  font-size: clamp(0.7rem, 1vw, 0.8rem);
-  color: #a8a29e;
-  margin: 0;
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
+    color: #a8a29e;
+    margin: 0;
 }
 
 .pricing-card.featured .pricing-detail {
-  color: #0097b2;
+    color: #0097b2;
 }
 
 .pricing-free {
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #f5f5f4;
-  border-radius: 8px;
-  padding: 12px 16px;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f5f5f4;
+    border-radius: 8px;
+    padding: 12px 16px;
 }
 
 .pricing-free svg {
-  width: 16px;
-  height: 16px;
-  color: #3d2174;
-  flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    color: #3d2174;
+    flex-shrink: 0;
 }
 
 .pricing-free p {
-  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
-  color: #57534e;
-  margin: 0;
+    font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+    color: #57534e;
+    margin: 0;
 }
-/* FOOTER */
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
 
 .footer {
     background-color: #3d2174;
     color: #ffffff;
     font-family: "Mona Sans", sans-serif;
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
     gap: 40px;
-
     padding: 40px 60px 20px;
 }
-
-
-/* LOGO */
 
 .logofooter {
     width: 200px;
@@ -575,7 +615,6 @@ p{
 .logofooter img {
     width: 150px;
     height: 100px;
-
     object-fit: cover;
     border-radius: 10px;
 }
@@ -584,9 +623,6 @@ p{
     font-size: 14px;
     margin-top: 15px;
 }
-
-
-/* SECCIONES DEL FOOTER */
 
 .footer-section {
     min-width: 180px;
@@ -600,7 +636,6 @@ p{
 
 .footer ul {
     list-style: none;
-
     padding: 0;
     margin: 0;
 }
@@ -610,82 +645,61 @@ p{
     margin-bottom: 10px;
 }
 
-
-/* ENLACES */
-
 .footer a {
     color: #ffffff;
     text-decoration: none;
 }
-
 .footer a:hover {
     color: #C1FF72;
 }
 
-
-/* CONTACTO */
-
 .soporte {
     font-size: 14px;
     color: #ffffff;
-
     list-style: none;
-
     padding: 0;
     margin: 0;
 }
-
 .soporte li:hover {
     color: #C1FF72;
 }
 
-
-/* PARTE INFERIOR */
-
 .border {
     width: 100%;
-
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-
     margin-top: 20px;
     padding-top: 20px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .border p {
     margin: 0;
     font-size: 14px;
 }
 
-
-/* REDES SOCIALES */
-
 .redes {
     display: flex;
     gap: 15px;
 }
-
 .border a {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 35px;
     height: 35px;
 }
-
 .border img {
     width: 30px;
     height: 30px;
-
     object-fit: contain;
-
     filter: brightness(0) saturate(100%) invert(100%);
 }
-/* Apartado solo de animaciones/transiciones */
+
+/* ==========================================================================
+   10. TRANSICIONES E INTERACCIONES
+   ========================================================================== */
+
 .btn-contactar{
     width: 100%;
     margin-top: 1rem;
@@ -697,19 +711,20 @@ p{
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: color 0.2 ease 0.2s ease, transform 0.1s ease;
+    transition: color 0.2s ease, transform 0.1s ease;
 }
 .btn-contactar:hover{
-    background-color: #c1ff72; 
+    background-color: #c1ff72;
     color: #3d2174;
 }
 .btn-contactar:active{
-    transform: scale(0.97); 
+    transform: scale(0.97);
 }
 .btn-contactar:focus-visible{
     outline: 2px solid #c1ff72;
     outline-offset: 2px;
 }
+
 .acciones-tarjeta button{
     background: none;
     border: none;
@@ -721,6 +736,7 @@ p{
     color: #c1ff72;
     transform: scale(1.1);
 }
+
 .acerca button{
     display: flex;
     align-items: center;
@@ -731,19 +747,21 @@ p{
     padding: 8px 16px;
     font-size: 0.85rem;
     cursor: pointer;
-    transition: border-color 0.2s ease, background-color 0.2s ease box-shadow 0.3s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.3s ease;
 }
 .acerca button:hover{
     border-color: #0097b2;
     background-color: #7be4f7;
     box-shadow: 10px 10px 10px #0097B2;
 }
+
 .tarjeta-perfil{
     transition: box-shadow 0.25s ease;
 }
 .tarjeta-perfil:hover{
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
+
 .opinion1, .opinion2, .opinion3, .respuesta,
 .recomendacion1, .recomendacion2, .recomendacion3{
     border: 1px solid #eee;
@@ -757,6 +775,7 @@ p{
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
 }
+
 .info-icon{
     background: none;
     border: none;
@@ -767,64 +786,47 @@ p{
 .info-icon:hover{
     color: #1a1a1a;
 }
-/*responsive*/
+
+/* ==========================================================================
+   11. RESPONSIVE
+   ========================================================================== */
+
+/* Tablet y móvil (hasta 768px) */
 @media (max-width: 768px) {
 
-    /* 1. El hero deja de ser dos columnas y pasa a apilarse */
+    /* Hero: pasa a una sola columna */
     .hero{
         flex-direction: column;
     }
 
-    /* 2. La tarjeta de perfil deja de ser sticky y ocupa el ancho completo */
+    /* Perfil: sin sticky y a ancho completo */
     .perfil{
-        position: static;   /* apaga el sticky en móvil */
+        position: static;
         width: 100%;
     }
     .tarjeta-perfil{
-        width: 100%;        /* en vez del 320px fijo de escritorio */
+        width: 100%;
     }
 
-    /* 3. La promesa ya no necesita max-width fijo */
+    /* Promesa: sin ancho fijo */
     .promesa{
         max-width: 100%;
     }
 
-    /* 4. La grilla de precios pasa de 4 columnas a 2 */
+    /* Precios: 2 columnas */
     .pricing-grid{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* 5. Navbar: logo + botón se apilan si no caben en una fila */
-    .navbar-contenido{
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    /* 6. Footer: los elementos se apilan en vez de ir en fila */
+    /* Footer: elementos apilados */
     .footer-contenido{
         flex-direction: column;
         gap: 16px;
         text-align: center;
     }
 }
-@media (max-width: 480px) {
 
-/* La grilla de precios baja a 1 columna en pantallas muy angostas */
-.pricing-grid{
-    grid-template-columns: 1fr;
-}
-
-/* Menos padding lateral para aprovechar el espacio */
-.info-general{
-    padding: 0 16px;
-}
-
-/* Los botones de "Acerca de" quedan más chicos */
-.acerca button{
-    font-size: 0.8rem;
-    padding: 6px 12px;
-}
-}
+/* Escritorio (desde 900px): opiniones y recomendaciones en 2 columnas */
 @media (min-width: 900px) {
     .opinion-grid,
     .recomendaciones-grid{
@@ -833,7 +835,24 @@ p{
         gap: 16px;
     }
 }
-@media (max-width: 768px) {
+
+/* Header: tablets (hasta 900px) */
+@media (max-width: 900px){
+    .nav-links{
+        gap: 20px;
+        margin-right: 24px;
+    }
+    .nav-links a{
+        font-size: 16px;
+    }
+    .header-button{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+/* Header: móvil (hasta 768px), apilado */
+@media (max-width: 768px){
     .header{
         flex-direction: column;
         align-items: stretch;
@@ -856,5 +875,33 @@ p{
         justify-content: center;
         font-size: 16px;
         padding: 10px 18px;
+    }
+    .nav-links{
+        order: 3;
+        width: 100%;
+        margin: 4px 0 0;
+        padding: 7px 0 8px;
+        justify-content: center;
+    }
+}
+/* Header: celulares pequeños (hasta 600px) */
+@media (max-width: 600px){
+    .header{
+        padding: 10px;
+    }
+    .logo img{
+        width: 70px;
+    }
+    .header-button{
+        font-size: 14px;
+        padding: 8px 14px;
+    }
+    .nav-links{
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+    .nav-links a{
+        font-size: 11px;
+        padding: 5px 4px;
     }
 }
