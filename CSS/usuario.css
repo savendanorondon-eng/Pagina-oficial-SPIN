@@ -48,18 +48,41 @@ body{
     margin-right: 60px
 }
 
+.nav-links {
+        display: flex;
+        order: 3;
+        width: 100%;
+        margin: 4px 0 0;
+        padding: 7px 0 3px;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+}
+.nav-links::-webkit-scrollbar {
+        display: none;
+}
 .nav a{
     font-size: 20px;
     font-weight: bold;
     color: #ffffff;
 }
-
+.nav-links a {
+    font-size: 11px;
+    padding: 5px 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
 .nav a:hover{
     border-bottom: 2px solid #C1FF72;
     padding-bottom: 8px;
     color: #C1FF72;
 }
 
+.nav-links a:hover {
+    padding-bottom: 6px;
+}
 .header-button{
     background: #3d2174;
     padding: 10px 22px;
