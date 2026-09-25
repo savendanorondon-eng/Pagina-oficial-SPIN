@@ -198,12 +198,13 @@ a{
 }
 
 .productoac button{
-    background-color:#ffff ;
+    background-color:#3d2174 ;
     border-radius: 30px;
     border:solid #3d2174;
-    color: #3d2174;
+    color: #ffffff;
     padding: 10px;
     font-size: 20px;
+    transition:scale 0.3s 0s background-color 0.5s ease;
 }
 
 .parrafo h1{
@@ -215,7 +216,8 @@ a{
 
 .productoac button:hover{
     background-color: #3d2174;
-    color:#C1FF72
+    color:#C1FF72;
+    transform:scale(1.1);
 }
 
 /*SECCION COMUNIDAD REGISTRO ENTRENADORES*/
