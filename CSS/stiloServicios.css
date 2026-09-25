@@ -251,14 +251,14 @@ h3, h4, p{
     transform: translateY(-4px) scale(1.05);
 }
  
-.parte1:hover h4, .parte1:hover p,
-.parte2:hover h4, .parte2:hover p,
-.parte3:hover h4, .parte3:hover p,
-.parte4:hover h4, .parte4:hover p,
-.apartado1:hover h4, .apartado1:hover p,
-.apartado2:hover h4, .apartado2:hover p,
-.apartado3:hover h4, .apartado3:hover p,
-.apartado4:hover h4, .apartado4:hover p {
+.parte1:hover h3, .parte1:hover p,
+.parte2:hover h3, .parte2:hover p,
+.parte3:hover h3, .parte3:hover p,
+.parte4:hover h3, .parte4:hover p,
+.apartado1:hover h3, .apartado1:hover p,
+.apartado2:hover h3, .apartado2:hover p,
+.apartado3:hover h3, .apartado3:hover p,
+.apartado4:hover h3, .apartado4:hover p {
     color: #3d2174;
 }
  
