@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Compra deportistas</title>
+        <link rel="stylesheet" href="stiloCompra.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+                <img src="img/logo de SPIN.png" alt="logo.oficial.SPIN">
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="ayuda.html">Ayuda</a>
+                <a href="Index.html">inicio</a>
+                <a href="Indexquienesomos.html">Quienes somos</a>
+            </nav>
+
+            <a href="registrado.html" class="header-button">Unete a SPIN</a>
+        </header>
+
+        <div class="apertura">
+            <div class="texto">
+                <h1>Elige tu plan a tu medida.</h1>
+                <p>Puedes seleccionar varios planes a la vez,revisar las opciones y continúar con el pago.</p>
+            </div>
+    
+            <div class="imagen">
+                <img src="compra1.png" alt="Deportista">
+            </div>
+
+        </div>
+
+        <nav class="elige">
+        <a href="compradeportistas.html">Deportistas</a>
+        <a href="compraclubes.html">Clubes</a>
+        </nav>
+
+        <div class="grid" id="tarifas">
+            
+            <section class="tarifas">
+                <p>TARIFAS DISPONIBLES</p>
+                
+                <div class="tarifa">
+                    <div class="plan" id="plan-progress">
+                        <p>RECOMENDADO</p>
+                        <h3>Plan Progress</h3>
+                        <p>8 sesiones de entrenamiento cada una de una hora enfocadas en el fortalecimiento ideal para el desarrollo fisico completo.</p>
+                        <p>$864.000</p>
+                    </div>
+
+                    <div class="plan" id="plan-outset">
+                        <h3>Outset</h3>
+                        <p>Enfocado en el plan base de una hora de entrenamiento especializado, personalizado.</p>
+                        <p>$60.000</p>
+                    </div>
+
+                    <div class="plan" id="plan-star">
+                        <h3>Star</h3>
+                        <p>4 sesiones de entrenamiento cada una de una hora enfocadas en el fortalecimiento especifico y trabajo consecutivo ideal.</p>
+                        <p>$230.000</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="compra" id="compra">
+            <h2>Resumen de compra</h2>
+
+            <div id="items">
+                <p class="inicio">Aún no has seleccionado ningún plan.</p>
+            </div>
+
+            <div class="total">
+                <h2>Total</h2>
+                <p id="total"><strong>$0</strong></p>
+            </div>
+
+            <button class="cta" id="go" disabled>Continuar con el pago →</button>
+
+            <div class="pago-seguro">
+                <img src="candado.png" alt="Logo de pago seguro" class="pago">
+                <p>Pago seguro y protegido</p>
+            </div>
+
+            <div class="proceso" id="proceso">
+                <label><input type="radio" name="metodo" value="pse" checked>Transferencia con PSE</label>
+                <label><input type="radio" name="metodo" value="efecty">Efecty</label>
+                <label><input type="radio" name="metodo" value="credito">Tarjeta de Crédito</label>
+                <label><input type="radio" name="metodo" value="debito"> Tarjeta de Débito</label>
+                <label><input type="radio" name="metodo" value="bancolombia">Transferencia Bancolombia</label>
+            </div>
+
+            <div class="nota">
+                <img src="seguridad.png" alt="Logo de pago seguro" class="pago">
+                <p>Tus datos están protegidos con tecnología de encriptación segura.</p>
+            </div>
+        </div>
+
+        <section class="SPIN">
+            <p>POR QUÉ ELEGIR SPIN</p>
+            <ul>
+                <li>
+                    <img src="seguridad.png" alt="Logo de pago seguro" class="pago">
+                    <div class="texto">
+                        <p><strong>Pagos seguros</strong></p>
+                        <p>Tus datos siempre protegidos</p>
+                    </div>
+                </li>
+            
+                <li>
+                    <img src="soporte.png" alt="Logo de soporte 24/7" class="pago">
+                    <div class="texto">
+                        <p><strong>Soporte 24/7</strong></p>
+                        <p>Estamos para ayudarte</p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="acceso.png" alt="Logo de acceso inmediato" class="pago">
+                    <div class="texto">
+                        <p><strong>Acceso inmediato</strong></p>
+                        <p>Empieza hoy mismo</p>
+                    </div>
+                </li>
+
+                <li>
+                    <img src="comunidad.png" alt="Logo de comunidad activa" class="pago">
+                    <div class="texto">
+                        <p><strong>Comunidad activa</strong></p>
+                        <p>Entrena junto a otros</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <script src="compra.js"></script>
+    </body>
+    <footer class="footer">
+
+        <div class="logofooter">
+            <img src="img/logo de SPIN.png" alt="Logo SPIN">
+            <p>DALE UN GIRO A TU VIDA</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Navegación</h3>
+            <ul class="Navegacion">
+                <li><a href="#elige">¿Quien quiere comprar?</a></li>
+                <li><a href="#tarifas">Nuestras tarifas</a></li>
+                <li><a href="#compra">Formulario de compra</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Sobre SPIN</h3>
+            <ul class="sobrespin">
+                <li><a href="indexquienesomos.html">Quiénes somos</a></li>
+                <li><a href="centrolegal.html">Menciones legales</a></li>
+                <li><a href="blogspin.html">Blog SPIN</a></li>
+                <li><a href="datosPersonales.html">Únete a entrenadores especializados</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contacto</h3>
+            <ul class="soporte">
+                <li><a href="ayuda.html">Centro de ayuda</a></li>
+                <li><a href="mailto:aspin@spin.com">aspin@spin.com</a></li>
+                <li><a href="mailto:spin@spin.com">spin@spin.com</a></li>
+                <li><a href="mailto:SPIN@spin.com">SPIN@spin.com</a></li>
+                <li><a href="https://twitter.com/spin" target="_blank">@spin</a></li>
+                <li><a href="https://www.instagram.com/spin/" target="_blank">#spin</a></li>
+            </ul>
+        </div>
+
+        <div class="border">
+
+            <p>© SPIN, dale un giro a tu vida y mejora tu rendimiento.</p>
+
+            <div class="redes">
+                <a href="https://www.instagram.com/" title="Instagram">
+                    <img src="Img/instagram.png" alt="Logo de Instagram">
+                </a>
+
+                <a href="https://www.tiktok.com/es/" title="TikTok">
+                    <img src="Img/tik-tok.png" alt="Logo de TikTok">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+</html>
